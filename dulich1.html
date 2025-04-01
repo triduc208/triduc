@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Xếp sản phẩm thành từng hàng */
+    align-items: center; /* Canh giữa nội dung */
+    width: 100%;
+    background-color: #f5f5f5;
+}
+
+.column {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.san-pham {
+        display: flex;
+        align-items: center;
+        background: white;
+        width: 60%; /* Giảm kích thước xuống để có khoảng trống bên phải */
+        max-width: 1200px; /* Giới hạn chiều rộng tối đa */
+        margin-left: 3%; /* Tạo khoảng trống bên trái */
+        padding: 20px;
+        box-shadow: 2px 2px 10px gray;
+        border-radius: 10px;
+    }
+    
+
+.san-pham img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.san-pham .info {
+    flex: 1;
+}
+
+.san-pham .ten {
+    font-size: 24px;
+    font-variant: small-caps;
+    color: blue;
+    font-weight: bold;
+}
+
+.san-pham .gia {
+    color: red;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.san-pham .gia del {
+    color: gray;
+    font-size: 18px;
+}
+
+/* Hiệu ứng hover */
+.san-pham:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: bisque;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .san-pham {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .san-pham img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="column"> 
+        <div class="san-pham">  
+        <img src="/image/australlia.svg" alt="">
+        <div class="gia">
+        <div class="ten">Australlia</div> 
+        <del>$ 800</del> $ 650 
+        </div> 
+        </div>
+        </div> 
+ 
+        <div class="column">
+        <div class="san-pham">  
+        <img src="/image/korean.jpg" alt="">
+        <div class="gia"> 
+        <div class="ten">Korea</div>
+        <del>$ 500</del> $ 450
+        </div> 
+        </div> 
+        </div>
+
+        <div class="column">
+        <div class="san-pham">  
+        <img src="/image/japan.jpg" alt="">
+        <div class="gia"> 
+        <div class="ten">Japan</div>
+        <del>$ 150</del> $ 120
+        </div> 
+        </div>
+        </div>
+
+        <div class="column">
+        <div class="san-pham">  
+        <img src="/image/italy.jpg" alt="">
+        <div class="gia"> 
+        <div class="ten">Italya</div>
+        <del>$ 180</del> $ 148 
+        </div> 
+        </div>  
+        </div>
+</body>
+</html>
